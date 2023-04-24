@@ -114,7 +114,7 @@
             android:layout_height="match_parent"
             android:text="Exit"
             android:textAllCaps="false"
-            android:onClick="create"
+            android:onClick="exit"
             android:layout_margin="4dp"
             />
     </LinearLayout>
