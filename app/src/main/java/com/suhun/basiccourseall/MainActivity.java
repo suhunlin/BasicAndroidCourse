@@ -33,4 +33,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LotteryActivity.class);
         goStartCallBalk.launch(intent);
     }
+
+    public void guess1A2BWelcome(View view){
+        Intent intent = new Intent(this, Guess1A2BWelcomeActivity.class);
+        goStartCallBalk.launch(intent);
+    }
 }
