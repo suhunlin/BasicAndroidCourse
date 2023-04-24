@@ -39,11 +39,11 @@ public class Guess1A2BActivity extends AppCompatActivity {
     }
 
     public void reset1A2B(View view){
-
+        guess1A2B.showGuess1A2BReset();
     }
 
     public void setting1A2B(View view){
-
+        guess1A2B.showGuess1A2BSetting();
     }
 
     public void exit1A2B(View view){

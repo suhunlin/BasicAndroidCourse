@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -25,6 +27,7 @@ public class Guess1A2B {
     private TextView logTV;
     private String answer;
     private int answerLen;
+    private int selectWhich;
     public Guess1A2B(Context context, Resources res, Button[] guess1A2BBtn, EditText userInputET, TextView logTV){
         this.context = context;
         this.res = res;
@@ -80,6 +83,49 @@ public class Guess1A2B {
         }
     }
 
+    public void showGuess1A2BReset(){
+        new AlertDialog.Builder(context)
+                .setTitle("Reset Game?")
+                .setMessage("Are yout sure?")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        resetGuessAB();
+                        userInputET.setText("");
+                    }
+                })
+                .setNeutralButton("Cancel", null)
+                .show();
+    }
+
+    public void showGuess1A2BSetting(){
+        String[] lenSelect = {"2", "3", "4", "5"};
+        int checkedItem = 0;
+        for(int i=0;i<lenSelect.length;i++){
+            if(lenSelect[i].equals(String.valueOf(answerLen))){
+                checkedItem = i;
+            }
+        }
+        new AlertDialog.Builder(context)
+                .setTitle("Setting Answer Length")
+                .setSingleChoiceItems(lenSelect, checkedItem, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Log.d(tag, "----which----" + which);
+                        selectWhich = which;
+                    }
+                })
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        answerLen = Integer.valueOf(lenSelect[selectWhich]);
+                        resetGuessAB();
+                    }
+                })
+                .setNeutralButton("Cancel", null)
+                .setCancelable(false)
+                .show();
+    }
     private String checkAnswer(){
         int a=0, b=0;
         if(userInputET.getText()!=null){
