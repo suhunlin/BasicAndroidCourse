@@ -55,5 +55,13 @@
             android:textAllCaps="false"
             android:onClick="stopWatch"
             />
+        <Button
+            android:id="@+id/ballGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ball Game"
+            android:textAllCaps="false"
+            android:onClick="ballGame"
+            />
     </LinearLayout>
 </RelativeLayout>

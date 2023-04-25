@@ -48,4 +48,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, StopWatchActivity.class);
         goStartCallBalk.launch(intent);
     }
+
+    public void ballGame(View view){
+        Intent intent = new Intent(this, BallGameActivity.class);
+        goStartCallBalk.launch(intent);
+    }
 }

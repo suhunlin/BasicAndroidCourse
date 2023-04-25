@@ -12,6 +12,10 @@
         android:theme="@style/Theme.BasicCourseAll"
         tools:targetApi="31">
         <activity
+            android:name=".BallGameActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
             android:name=".StopWatchActivity"
             android:exported="false" />
         <activity
