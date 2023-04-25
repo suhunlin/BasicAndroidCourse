@@ -38,4 +38,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Guess1A2BWelcomeActivity.class);
         goStartCallBalk.launch(intent);
     }
+
+    public void sign(View view){
+        Intent intent = new Intent(this, SignActivity.class);
+        goStartCallBalk.launch(intent);
+    }
 }
