@@ -47,5 +47,13 @@
             android:textAllCaps="false"
             android:onClick="sign"
             />
+        <Button
+            android:id="@+id/stopwatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Watch"
+            android:textAllCaps="false"
+            android:onClick="stopWatch"
+            />
     </LinearLayout>
 </RelativeLayout>

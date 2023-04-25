@@ -43,4 +43,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignActivity.class);
         goStartCallBalk.launch(intent);
     }
+
+    public void stopWatch(View view){
+        Intent intent = new Intent(this, StopWatchActivity.class);
+        goStartCallBalk.launch(intent);
+    }
 }
