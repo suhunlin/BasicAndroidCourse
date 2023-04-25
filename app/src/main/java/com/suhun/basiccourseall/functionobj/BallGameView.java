@@ -35,7 +35,6 @@ public class BallGameView extends View {
             this.ballbmp = Bitmap.createScaledBitmap(
                     BitmapFactory.decodeResource(res, ballId[new Random().nextInt(4)])
                     ,ballW, ballH, false);
-            Log.d(tag, "===ballX"+ballX+",ballY"+ballY+"===");
         }
     }
     public BallGameView(Context context, @Nullable AttributeSet attrs) {
