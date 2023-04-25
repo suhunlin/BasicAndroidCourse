@@ -48,6 +48,7 @@
             />
     </LinearLayout>
     <com.suhun.basiccourseall.functionobj.SignView
+        android:id="@+id/signName"
         android:layout_width="0dp"
         android:layout_weight="7"
         android:layout_height="match_parent"
