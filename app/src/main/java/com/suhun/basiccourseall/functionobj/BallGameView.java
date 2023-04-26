@@ -100,14 +100,16 @@ public class BallGameView extends View {
             balls.add(ball);
             postInvalidate();
         }
-//        else if(event.getAction() == MotionEvent.ACTION_MOVE){
-//            if(balls.size() > 0){
-//                for(Ball ball:balls){
-//                    ball.stopBallRun();
-//                    postInvalidate();
-//                }
-//            }
-//        }
         return true;
+    }
+
+    public void stopBallGame(){
+        if(balls.size() > 0){
+            for(Ball ball:balls){
+                ball.stopBallRun();
+            }
+            balls.clear();
+            postInvalidate();
+        }
     }
 }
